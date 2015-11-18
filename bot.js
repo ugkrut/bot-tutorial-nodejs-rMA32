@@ -92,7 +92,7 @@ function respond() {
   }
   else if(request.text && botRegexYu.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.youtube.com/results?lclk=channel&filters=channel&search_query="+request.text.substring(5,request.text.length));
+    postMessage("https://www.youtube.com/results?lclk=channel&filters=channel&search_query="+request.text.substring(9,request.text.length));
     this.res.end();
   
   }
