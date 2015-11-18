@@ -90,7 +90,7 @@ function respond() {
     postMessage("http://daddyleagues.com/IRON/rules");
     this.res.end();
   }
-  else if(request.text && botRegexP.test(request.text)) {
+  else if(request.text && botRegexYu.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
