@@ -71,7 +71,7 @@ function respond() {
   } 
   else if(request.text && botRegexWk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1kJqQWCq3RKiTrd4f71FFNKr-Y0ppJzjk0fSF0rP6Bto/edit?usp=sharing");
+    postMessage("http://daddyleagues.com/iron/forum/topic/28916");
     this.res.end();
   } 
   else if(request.text && botODB.test(request.text)) {
