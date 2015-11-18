@@ -92,8 +92,6 @@ function respond() {
   }
   else if(request.text && botRegexYu.test(request.text)) {
     this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
-    var rep = req.replace(/ /,"+");
     postMessage("https://www.youtube.com/results?search_query="+request.text.substring(8,request.text.length));
     this.res.end();
   
