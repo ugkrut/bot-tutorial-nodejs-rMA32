@@ -101,11 +101,7 @@ function respond() {
     postMessage("http://daddyleagues.com/iron/standings/league");
     this.res.end();
   }
-      else if(request.text && botRegexFr.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/forum");
-    this.res.end();
-  }
+  
   else {
     console.log("don't care");
     this.res.writeHead(200);
