@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/benice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSt = /^\/standings;
+      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSt = /^\/standings; botRegexFr = /^\/forum;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -99,6 +99,11 @@ function respond() {
     else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/iron/standings/league");
+    this.res.end();
+  }
+      else if(request.text && botRegexFr.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/iron/forum");
     this.res.end();
   }
   else {
