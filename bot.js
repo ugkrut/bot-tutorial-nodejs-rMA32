@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/benice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/superbowl/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
       botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSc = /^\/schedule/; botRegexSt = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -62,7 +62,7 @@ function respond() {
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reddit.com/r/maddenall32");
+    postMessage("http://daddyleagues.com/iron/forum/topic/33959");
     this.res.end();
   } 
   else if(request.text && botRegexSh.test(request.text)) {
