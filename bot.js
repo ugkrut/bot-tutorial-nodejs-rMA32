@@ -6,9 +6,9 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
-      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i;
+      botRegexAd=/^\/advance/;botRegexGTA = /^\/benice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
+      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSc = /^\/schedule/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -39,7 +39,7 @@ function respond() {
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/220x147.jpeg.a2dd2add32b14fff9e329535186d793c.large");
+    postMessage("http://teesbox.com/image/cache/data/be-nice-or-fuck-off/be-nice-or-fuck-off-346x410.png");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
@@ -94,7 +94,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://www.youtube.com/results?lclk=channel&filters=channel&search_query="+request.text.substring(9,request.text.length));
     this.res.end();
-  
+  } 
+  else if(request.text && botRegexSc.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/iron/standings/league");
+    this.res.end();
   }
   else {
     console.log("don't care");
