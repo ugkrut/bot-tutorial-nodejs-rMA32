@@ -9,6 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/be nice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/superbowl/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
       botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSc = /^\/schedule/; botRegexSt = /^\/standings/; botRegexFo = /^\/forum/;
+      botRegexGoat = /^\/goat/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -110,9 +111,14 @@ function respond() {
     postMessage("http://daddyleagues.com/iron/forum");
     this.res.end();
   }
-        else if(request.text && botRegexGay.test(request.text)) {
+      else if(request.text && botRegexGay.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://cdn.geekwire.com/wp-content/uploads/Seattle_Seahawks.jpg");
+    this.res.end();
+  }
+        else if(request.text && botRegexGoat.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://vlsportysexycool.com/wp-content/uploads/2013/03/Curry-dance.jpg");
     this.res.end();
   }
   else {
