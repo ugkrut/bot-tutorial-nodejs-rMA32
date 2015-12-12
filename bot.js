@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/;botRegexGay = /^\/gay/;
       botRegexAd=/^\/advance/;botRegexGTA = /^\/benice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/superbowl/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
       botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSc = /^\/schedule/; botRegexSt = /^\/standings/; botRegexFo = /^\/forum/;
@@ -108,6 +108,11 @@ function respond() {
       else if(request.text && botRegexFo.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/iron/forum");
+    this.res.end();
+  }
+        else if(request.text && botRegexGay.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://cdn.geekwire.com/wp-content/uploads/Seattle_Seahawks.jpg");
     this.res.end();
   }
   else {
