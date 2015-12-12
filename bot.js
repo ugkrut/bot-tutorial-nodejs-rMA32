@@ -9,7 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/be nice/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/superbowl/; botRegexSh = /^\/shrug/; botRegexWk = /^\/contacts/;
       botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSc = /^\/schedule/; botRegexSt = /^\/standings/; botRegexFo = /^\/forum/;
-      botRegexGoat = /^\/goat/;
+      botRegexGoat = /^\/goat/; botRegexZach = /^\/lyin/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -119,6 +119,11 @@ function respond() {
         else if(request.text && botRegexGoat.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://vlsportysexycool.com/wp-content/uploads/2013/03/Curry-dance.jpg");
+    this.res.end();
+  }
+       else if(request.text && botRegexZach.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/512x512.png.86ad47f7c7204f2fad46b78069c2cff0.large");
     this.res.end();
   }
   else {
