@@ -45,14 +45,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/som/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/iron/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/som/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -63,7 +63,7 @@ function respond() {
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/forum/topic/33959");
+    postMessage("http://daddyleagues.com/som/forum/topic/12330");
     this.res.end();
   } 
   else if(request.text && botRegexSh.test(request.text)) {
@@ -73,7 +73,7 @@ function respond() {
   } 
   else if(request.text && botRegexWk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/forum/topic/28916");
+    postMessage("http://daddyleagues.com/som/forum/topic/12224");
     this.res.end();
   } 
   else if(request.text && botODB.test(request.text)) {
@@ -88,7 +88,7 @@ function respond() {
   } 
   else if(request.text && botRegexRu.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/IRON/rules");
+    postMessage("http://daddyleagues.com/som/rules");
     this.res.end();
   }
   else if(request.text && botRegexYu.test(request.text)) {
@@ -98,17 +98,17 @@ function respond() {
   } 
   else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/standings/league");
+    postMessage("http://daddyleagues.com/som/standings/league");
     this.res.end();
   }
     else if(request.text && botRegexSc.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/schedules");
+    postMessage("http://daddyleagues.com/som/schedules");
     this.res.end();
   }
       else if(request.text && botRegexFo.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/iron/forum");
+    postMessage("http://daddyleagues.com/som/forum");
     this.res.end();
   }
       else if(request.text && botRegexGay.test(request.text)) {
